@@ -8,9 +8,8 @@ published: true
 
 
 Using Jekyll to set up the blog is really simple and quick.
-
-
-	// Here is a sample code snippet
+	
+    // Here is a sample code snippet
     let x = 10;
     console.log(x);
 
