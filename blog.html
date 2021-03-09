@@ -5,7 +5,7 @@ permalink: /blog/
 ---
 
 <div class="vertically-center-content blog">
-  <div style="display: flex"><a href="/" class="back">👈 Back</a><span class="header-text">BLOG</span></div>
+  {% include back-title.html %}
     {% assign postsByYear =  site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
     {% for year in postsByYear %}
       <b class="year">{{ year.name }}</b>
