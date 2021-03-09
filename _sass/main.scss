@@ -10,14 +10,10 @@ body {
   color: $base-color;
 }
 
-b {
-  font-weight: bold;
-}
-
 a {
   color: $base-color;
 
-  &.tag{
+  &.tag {
     display: inline-block;
     border-radius: 0.3em;
     padding: 0.1em;
@@ -27,10 +23,10 @@ a {
     &:hover {
       background-color: $highlight-hover-color;
     }
-  }
 
-  &:visited {
-    color: $base-color;
+    &:visited {
+      color: $base-color;
+    }
   }
 }
 
@@ -61,5 +57,43 @@ a {
     height: auto;
     opacity: .5;
     margin-right: 5px;
+  }
+}
+
+.header-text {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.blog {
+  a {
+    text-decoration: none
+  }
+
+  .year {
+    text-align: end;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .blog-title {
+
+  }
+
+  .blog-publish-date {
+    color: $highlight-hover-color;
+  }
+}
+
+.back {
+  position: relative;
+  right: 80px;
+  text-decoration: none;
+  color: $highlight-color;
+
+  &:hover {
+    color: $highlight-hover-color;
   }
 }

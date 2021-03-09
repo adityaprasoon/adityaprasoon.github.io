@@ -3,13 +3,17 @@ layout: default
 title: Blog
 permalink: /blog/
 ---
-<h1>Latest Posts</h1>
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      {{ post.excerpt }}
-    </li>
-  {% endfor %}
-</ul>
+<div class="vertically-center-content blog">
+  <div style="display: flex"><a href="/" class="back">👈 Back</a><span class="header-text">BLOG</span></div>
+    {% assign postsByYear =  site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+    {% for year in postsByYear %}
+      <b class="year">{{ year.name }}</b>
+      <ul>
+        {% for post in year.items %}
+        <li><a style="display: flex" href="{{ post.url }}"><span class="blog-title" style="flex-grow: 1">{{ post.title }}</span>
+          <span class="blog-publish-date">{{ post.date | date: "%b %d"}}</span></a></li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+</div>
