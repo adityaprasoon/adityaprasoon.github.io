@@ -1,0 +1,11 @@
+<nav class="navigation">
+    <ul>
+        {% for nav-item in site.data.nav-items%}
+        <li class="nav-item">
+            <a href="{{nav-item.url}}" {% if page.uid == nav-item.name %}class="active"{% endif %}>
+                {{ nav-item.label }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
