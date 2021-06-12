@@ -5,4 +5,4 @@ heading: "Resume"
 uid: resume
 ---
 
-this is resume
+Content will be added soon.

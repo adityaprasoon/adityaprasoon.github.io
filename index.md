@@ -1,6 +1,4 @@
 ---
-layout: default
+layout: index-container
 title: "Aditya Prasoon"
 ---
-
-Hello index

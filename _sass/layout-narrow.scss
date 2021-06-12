@@ -4,6 +4,7 @@
   padding: 1em;
   background-color: $dark-lite;
   box-shadow: 1px 1px 200px 20px $dark-heavy;
+  margin: 0 auto;
 
   .content {
     padding: 1em 2em 2em;
@@ -18,7 +19,6 @@
 @media all and (min-width: 600px) {
   .container-narrow {
     width: 75vw;
-    margin: 0 auto;
   }
 }
 
@@ -26,6 +26,6 @@
 @media all and (min-width: 1200px) {
   .container-narrow {
     width: 50vw;
-    margin: 0 auto;
+
   }
 }

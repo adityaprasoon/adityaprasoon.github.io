@@ -1,0 +1,56 @@
+.container-index {
+  min-height: 100vh;
+  padding: 1em;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.2em;
+
+  .name {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: underline dashed;
+
+    &.tag {
+      text-decoration: none;
+      color: $contrast;
+
+      &:hover {
+        color: $contrast-heavy;
+      }
+    }
+  }
+
+  .contact-icons {
+    .social-icon {
+      color: $light;
+      display: inline-flex;
+      width: 30px;
+      height: auto;
+      opacity: .5;
+      margin-right: 5px;
+      background-color: white;
+      padding: 2px 3px;
+      border-radius: 2px;
+    }
+  }
+}
+
+@media all and (min-width: 600px) {
+  .container-index {
+    width: 75vw;
+  }
+}
+
+
+@media all and (min-width: 1200px) {
+  .container-index {
+    width: 60vw;
+
+  }
+}
