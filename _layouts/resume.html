@@ -1,7 +1,57 @@
 ---
 layout: narrow-container
 ---
+<div class="centered">
+    <h1 class="page-heading">Aditya Prasoon</h1>
+    <h2>Senior Software Engineer</h2>
+    <span>prasoon.aditya@gmail.com | +91 99 323 02538 </span>
+</div>
 
-<h1 class="page-heading">{{page.heading}}</h1>
+{{site.data.resume-content.profile.label | markdownify}}
+{{site.data.resume-content.profile.text | markdownify}}
 
-{{content}}
+<div class="resume-container">
+    <div class="skill">
+        <h2>Skill set</h2>
+        <div class="skill-container">
+            {% for skill-cat in site.data.resume-content.skill-set%}
+            <div class="skill-cat-container">
+                <h3>{{skill-cat.label}}</h3>
+                <ul>
+                    {% for skill in skill-cat.values%}
+                    <li>{{skill}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="experience">
+        <h2>Work Experience</h2>
+        <div class="experience-container">
+            {% for exp in site.data.resume-content.work-experience%}
+            <h3 class="position">{{exp.position}}, {{exp.duration}}</h3>
+            <h3 class="employer">{{exp.company}}</h3>
+            <ul>
+                {% for detail in exp.details%}
+                <li>{{detail | markdownify}}</li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="education">
+        <h2>Education</h2>
+        <div class="education-container">
+            {% for ed in site.data.resume-content.education%}
+            <div class="skill-cat-container">
+                <h3 class="degree">{{ed.degree}}, {{ed.completion-year}}</h3>
+                <h3 class="institute">{{ed.institute}}</h3>
+                <div class="course">{{ed.course}}</div>
+                <div class="grade">{{ed.grade}}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,84 @@
+profile:
+  label: '## Profile'
+  text: '6+ years’ of experience in software development with product based companies with exposure to full
+stack. Recent projects on Angular 8 application using Typescript. Prior projects using front-end
+technologies like Javascript (ES6), HTML, CSS, HandlebarJS, jQuery etc. Prior back-end experience
+with Java based middleware technologies like Spring, Hibernate, JAX-RS etc and databases including
+RDMBS, MongoDB, Redis and Columnar Databases.'
+
+skill-set:
+  - label: Frontend
+    values:
+      - Angular, Typescript
+      - HTML5, CSS3, SCSS
+      - PrimeNG, Bootstrap
+      - HandlebarJS,AngularJS1.6
+      - Adobe/Apache Flex
+  - label: Backend
+    values:
+      - Java SE 8,Spring
+      - Hibernate/JPA
+      - JaxRS (Jersey)
+  - label: Database
+    values:
+      - MS SQL Server
+      - MongoDB, Redis, MySQL
+      - MariaDB Columnstore
+  - label: Others
+    values:
+      - Git, SVN
+      - Gradle, Maven, Ant
+      - Tomcat, WildFly
+
+work-experience:
+  - company: Infogix International Pvt Ltd, Bangalore
+    company-url: https://infogix.com
+    position: Senior Software Engineer
+    duration: September 2019 - Present
+    details:
+      - Responsible for development of Angular 8 based web application
+        for enterprise products. Used technologies include Typescript
+        and SCSS.
+      - Involved in business logic development and styling of the
+        application. Worked on Angular component development for
+        graphical dashboards using ChartJS. Used several PrimeNG
+        components.
+      - Used Gradle to unify building angular application with Java
+        backend.
+
+  - company: Infogix International Pvt Ltd, Bangalore
+    company-url: https://infogix.com
+    position: Senior Software Engineer
+    duration: September 2019 - Present
+    details:
+      - Responsible for development of Angular 8 based web application
+        for enterprise products. Used technologies include Typescript
+        and SCSS.
+      - Involved in business logic development and styling of the
+        application. Worked on Angular component development for
+        graphical dashboards using ChartJS. Used several PrimeNG
+        components.
+      - Used Gradle to unify building angular application with Java
+        backend.
+
+education:
+  - degree: Bachelor of Technology
+    completion-year: 2014
+    institute: Sikkim Manipal Institute of Technology, Sikkim
+    institute-url: https://smit.smu.edu
+    course: Electronics and Communication Engineering
+    grade: CGPA - 9.5/10
+
+  - degree: SSCE (CBSE 12th)
+    completion-year: 2009
+    institute: St. Michael’s High School, Patna
+    institute-url: https://smhs.edu
+    course: Mathematics, Physics, Chemistry, Information Technology
+    grade: 74.4%
+
+  - degree: SSE (CBSE 10th)
+    completion-year: 2007
+    institute: St. Michael’s High School, Patna
+    institute-url: https://smit.smu.edu
+    course: Mathematics, Science, English
+    grade: 90.2%
