@@ -1,3 +1,8 @@
+title: Aditya Prasoon | Blog
+description: Personal website of Aditya Prasoon
+url: https://adityaprasoon.dev
+author: Aditya Prasoon
+
 collections:
   projects:
     output: true
