@@ -3,3 +3,6 @@ collections:
     output: true
 
 collections_dir: my_collections
+
+gems:
+  - jekyll-feed
