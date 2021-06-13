@@ -1,0 +1,5 @@
+collections:
+  projects:
+    output: true
+
+collections_dir: my_collections
