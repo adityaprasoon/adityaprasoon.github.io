@@ -41,20 +41,122 @@ div.centered {
   text-align: center;
 }
 
+.resume-head{
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    span {
+      margin: 0 1em;
+    }
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin-bottom: 0.2em;
+  }
+
+
+}
+
 .resume-container {
+   > div {
+     margin-top: 2em;
+   }
+
+  h2 {
+    color: $contrast;
+  }
+
   .skill {
     .skill-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+
+      .skill-cat-container {
+        h3 {
+          margin: 0;
+        }
+      }
     }
   }
 
   .experience {
-
+    .experience-container {
+      h3 {
+        margin: 0;
+      }
+      .employer {
+        font-weight: lighter;
+      }
+    }
   }
 
   .education {
-
+    .education-container {
+      h3 {
+        margin: 0;
+      }
+      .institute {
+        font-weight: lighter;
+      }
+      .course {
+        margin-top: 0.5em;
+      }
+      .grade {
+        margin-bottom: 1em;
+      }
+    }
   }
+}
+
+.container-narrow {
+  .content {
+    padding: 1em 2em 2em;
+
+    h1.page-heading{
+      font-size: 2.5rem;
+      line-height: 1em;
+    }
+
+    .index {
+      ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+          margin-bottom: 1em;
+          &:hover {
+            color: $contrast;
+          }
+        }
+      }
+      .month {
+        color: $contrast;
+      }
+
+      .year {
+        margin-top: 1.5em;
+      }
+
+      .title {
+        margin: 0;
+      }
+
+      .summary {
+        margin-top: 0.5em;
+      }
+    }
+  }
+}
+
+.resume-footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

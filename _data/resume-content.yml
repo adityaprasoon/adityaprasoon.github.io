@@ -32,7 +32,7 @@ skill-set:
 
 work-experience:
   - company: Infogix International Pvt Ltd, Bangalore
-    company-url: https://infogix.com
+    company-url: https://www.infogix.com
     position: Senior Software Engineer
     duration: September 2019 - Present
     details:
@@ -47,7 +47,7 @@ work-experience:
         backend.
 
   - company: Infogix International Pvt Ltd, Bangalore
-    company-url: https://infogix.com
+    company-url: https://www.infogix.com
     position: Senior Software Engineer
     duration: September 2019 - Present
     details:
@@ -65,20 +65,20 @@ education:
   - degree: Bachelor of Technology
     completion-year: 2014
     institute: Sikkim Manipal Institute of Technology, Sikkim
-    institute-url: https://smit.smu.edu
+    institute-url: https://smu.edu.in/smit.html/
     course: Electronics and Communication Engineering
     grade: CGPA - 9.5/10
 
   - degree: SSCE (CBSE 12th)
     completion-year: 2009
     institute: St. Michael’s High School, Patna
-    institute-url: https://smhs.edu
+    institute-url: https://www.stmichaelspatna.edu.in/
     course: Mathematics, Physics, Chemistry, Information Technology
     grade: 74.4%
 
   - degree: SSE (CBSE 10th)
     completion-year: 2007
     institute: St. Michael’s High School, Patna
-    institute-url: https://smit.smu.edu
+    institute-url: https://www.stmichaelspatna.edu.in/
     course: Mathematics, Science, English
     grade: 90.2%

@@ -1,32 +1,31 @@
 .container-narrow {
-  width: 100vw;
   min-height: 100vh;
   padding: 1em;
-  background-color: $dark-lite;
+  background-color: $dark;
   box-shadow: 1px 1px 200px 20px $dark-heavy;
   margin: 0 auto;
-
-  .content {
-    padding: 1em 2em 2em;
-
-    h1.page-heading{
-      font-size: 2.5rem;
-      line-height: 1em;
-    }
-  }
 }
 
 
 @media all and (min-width: 600px) {
   .container-narrow {
     width: 75vw;
+    background-color: $dark-lite;
+  }
+
+  nav.navigation {
+    background-color: $dark-lite !important;
   }
 }
 
 
 @media all and (min-width: 1200px) {
   .container-narrow {
-    width: 50vw;
+    width: 60vw;
+    background-color: $dark-lite;
+  }
 
+  nav.navigation {
+    background-color: $dark-lite !important;
   }
 }

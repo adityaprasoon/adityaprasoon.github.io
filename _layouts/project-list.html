@@ -3,7 +3,7 @@ layout: narrow-container
 ---
 
 <h1 class="page-heading">{{page.heading}}</h1>
-
+<div class="index">
 {% for project in site.projects reversed %}
 {% capture this_year %}{{ project.date | date: "%Y" }}{% endcapture %}
 {% capture this_month %}{{ project.date | date: "%B" }}{% endcapture %}
@@ -11,26 +11,31 @@ layout: narrow-container
 {% capture next_month %}{{ project.previous.date | date: "%B" }}{% endcapture %}
 
 {% if forloop.first %}
-<h2 id="{{ this_year }}-ref">{{this_year}}</h2>
-<h3 id="{{ this_year }}-{{ this_month }}-ref">{{ this_month }}</h3>
+<h2 class="year">{{this_year}}</h2>
+<h3 class="month">{{ this_month }}</h3>
 <ul>
-    {% endif %}
-    <li><a href="{{ project.url }}">{{ project.title }}</a></li>
-    {% if forloop.last %}
+{% endif %}
+<li>
+    <a href="{{ project.url }}">
+        <h3 class="title">{{ project.title }}</h3>
+        <div class="summary">{{project.summary}}</div>
+    </a>
+</li>
+{% if forloop.last %}
 </ul>
 {% else %}
 {% if this_year != next_year %}
 </ul>
-<h2 id="{{ next_year }}-ref">{{next_year}}</h2>
-<h3 id="{{ next_year }}-{{ next_month }}-ref">{{ next_month }}</h3>
+<h2 class="year">{{next_year}}</h2>
+<h3 class="month">{{ next_month }}</h3>
 <ul>
-    {% else %}
-    {% if this_month != next_month %}
+{% else %}
+{% if this_month != next_month %}
 </ul>
-<h3 id="{{ this_year }}-{{ next_month }}-ref">{{ next_month }}</h3>
+<h3 class="month">{{ next_month }}</h3>
 <ul>
-    {% endif %}
-    {% endif %}
-    {% endif %}
-
+{% endif %}
+{% endif %}
+{% endif %}
 {% endfor %}
+</div>
