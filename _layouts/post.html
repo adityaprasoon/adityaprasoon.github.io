@@ -2,6 +2,6 @@
 layout: narrow-container
 ---
 
-<h1 class="page-heading">{{ page.title }}</h1>
+<h1 class="page-heading">{{ page.title }} {{%if page.status %}}, ({{page.status}}) {{% endif %}}</h1>
 {{page.date | date: "%a, %b %d, %Y"}}
 {{content}}
