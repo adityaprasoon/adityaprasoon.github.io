@@ -4,7 +4,7 @@ import profilePic from "@/public/me.jpg";
 export function RootAside() {
     return (
         <div className="tw-flex tw-flex-wrap">
-            <Image src={profilePic} width={246} height={328}/>
+            <Image src={profilePic} alt="My photograph" width={246} height={328}/>
             <div className="tw-w-[246px]">
                 Intro
             </div>
