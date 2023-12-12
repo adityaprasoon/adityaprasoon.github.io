@@ -1,7 +1,7 @@
 import Image from "next/image";
 import profilePic from "@/public/me.jpg";
 
-export function RootAside() {
+export function Aside() {
     return (
         <div className="tw-flex tw-flex-wrap">
             <Image src={profilePic} alt="My photograph" width={246} height={328}/>
