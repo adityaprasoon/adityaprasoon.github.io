@@ -1,3 +1,214 @@
-.current {
-    color: green;
+@import "normalize.css";
+
+@font-face {
+    font-family: concourse_3;
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-display: auto;
+    src: url("/assets/fonts/concourse/concourse_3_regular.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: concourse_3;
+    font-style: italic;
+    font-weight: normal;
+    font-stretch: normal;
+    font-display: auto;
+    src: url("/assets/fonts/concourse/concourse_3_italic.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: concourse_3;
+    font-style: normal;
+    font-weight: bold;
+    font-stretch: normal;
+    font-display: auto;
+    src: url("/assets/fonts/concourse/concourse_3_bold.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: concourse_3;
+    font-style: italic;
+    font-weight: bold;
+    font-stretch: normal;
+    font-display: auto;
+    src: url("/assets/fonts/concourse/concourse_3_bold_italic.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: concourse_3_caps;
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-display: auto;
+    src: url("/assets/fonts/concourse/concourse_3_caps_regular.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: concourse_3_caps;
+    font-style: normal;
+    font-weight: bold;
+    font-stretch: normal;
+    font-display: auto;
+    src: url("/assets/fonts/concourse/concourse_3_caps_bold.woff2") format("woff2")
+}
+
+
+/* VARIABLES */
+:root {
+    --main-background: hsl(200, 3%, 12%);
+    --secondary-background: hsl(0, 0%, 20%);
+    --tertiary-background: hsl(0, 0%, 30%); /* For callout border etc*/
+    --main-font-color: hsl(0, 0%, 85%);
+    --secondary-font-color: hsl(0, 0%, 65%);
+
+    --main-font: concourse_3;
+    --font-size-normal: 1.25em;
+    --font-size-medium: 0.9em;
+    --font-size-small: 0.8em;
+
+    --border-radius-normal: 1em;
+    --border-radius-less: 0.7em;
+
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-background: white;
+        --secondary-background: hsl(240, 9%, 90%);
+        --tertiary-background: hsl(0, 0%, 70%); /* For callout border etc*/
+        --main-font-color: hsl(0, 0%, 10%);;
+        --secondary-font-color: hsl(240, 1%, 35%);
+    }
+}
+
+/*@media (prefers-color-scheme: dark) {*/
+/*--bg: hsl(200, 3%, 12%);*/
+/*--bg-dark: hsl(0, 0%, 20%);*/
+/*--body: hsl(0, 0%, 85%);*/
+/*--border-color: hsl(0, 0%, 30%);*/
+/*--light: hsl(0, 0%, 65%);*/
+
+/*--bg: white;*/
+/*--bg-dark: hsl(240, 9%, 90%);*/
+/*--body: hsl(0, 0%, 10%);*/
+/*--border-color: hsl(0, 0%, 70%);*/
+/*--light: hsl(240, 1%, 35%);*/
+
+/* SITE WIDE STYLES */
+:root {
+    background-color: var(--main-background);
+    color: var(--main-font-color);
+    font-family: var(--main-font), cursive;
+    font-weight: normal;
+    font-size: var(--font-size-normal);
+    padding: 0 1em;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased
+}
+
+a {
+    color: unset;
+}
+
+a:link,
+a:visited {
+    color: unset;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: unset;
+}
+
+/*p {*/
+/*    font-size: 1.25em;*/
+/*}*/
+
+/* COMPONENTS STYLES */
+.site-container {
+    max-width: 36rem;
+    margin: 1em auto;
+}
+
+.site-nav-container {
+    font-size: var(--font-size-small);
+
+    a {
+        text-decoration: none;
+        color: var(--secondary-font-color);
+        font-weight: 300;
+
+        &.current {
+            color: var(--main-font-color);
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.header {
+    h2 {
+        margin-bottom: 0;
+    }
+
+    p {
+        margin-top: 0.5em;
+        font-size: var(--font-size-medium);
+    }
+}
+
+.profile-icons {
+    a {
+        margin:0 0.25em;
+    }
+}
+
+.post-filters {
+    font-size: var(--font-size-small);
+
+    button {
+        display: inline-block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--main-font-color);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.post {
+    font-size: var(--font-size-small);
+    margin-bottom: 1em;
+
+    p {
+        margin: 0;
+        display: flex;
+        align-content: end;
+
+        .category {
+            margin-left: auto;
+            margin-right: 0.5em;
+            border: 1px solid var(--tertiary-background);
+            padding: 0 0.5em;
+            border-radius: var(--border-radius-less);
+        }
+    }
+
+    .title {
+        text-decoration: none;
+        font-size: var(--font-size-normal);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }

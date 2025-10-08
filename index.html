@@ -4,11 +4,36 @@ title: Home
 layout: with-nav-bar
 ---
 
-<div class="homepage greeting">
-    {{ "Hello World" | downcase }}
-</div>
-<div class="homepage post-list-container">
-    <div class="post-filters">
+<header class="header">
+    <h2>Aditya Prasoon</h2>
+    <p>Software engineer based in Bangalore, India</p>
+</header>
+
+<section class="introduction">
+    <p>I have been writing code since I was a teenager.
+        It was fun then and it is fun now that I do it professionally.</p>
+
+    <p>I don't have a formal training in Software Engineering.
+        I studied Electronics and Communication Engineering in college
+        and even though I don't have a formal training in Software Engineering,
+        I have read more Computer Science books than others.</p>
+
+    <p>See what I am doing <a href="./now">now</a>.</p>
+    <p class="profile-icons">Public profiles:
+        <a href="https://github.com/adityaprasoon" target="_blank"><i class="fa fa-lg fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/adityaprasoon/" target="_blank"><i class="fa fa-lg fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://www.last.fm/user/adityaprasoon" target="_blank"><i class="fa fa-lg fa-lastfm" aria-hidden="true"></i></a>
+    </p>
+    <p>Contact: prasoonaditya[at]gmail[dot]com</p>
+</section>
+
+<section class="posts-container">
+    <hr/>
+    <p>Below are some of my writings, covering a range of topics I enjoy exploring, from programming and personal tech
+        projects to thoughts on life in general.</p>
+
+    <p class="post-filters">
+        Filter:
         {% assign all_categories = "" | split: "" %}
 
         {% for post in site.posts %}
@@ -18,39 +43,41 @@ layout: with-nav-bar
         {% endfor %}
 
         {% assign unique_categories = all_categories | uniq | sort %}
-        <div>
-            <button id="All" onclick="filterUsingCategory('All')">
-                All
-            </button>
-            {% for category in unique_categories %}
-            <button id="{{ category }}" onclick="filterUsingCategory(this.id)">
-                {{ category }}
-            </button>
-            {% endfor %}
-        </div>
-    </div>
-    <div class="post-list">
-        {% for post in site.posts %}
-        <div class="post" data-category="{{post.category}}">
-            <a href="{{post.url}}">{{ post.title }}</a>
-            {{post.category}}
-            <p>{{post.tags}}</p>
-        </div>
+
+        <button id="All" onclick="filterUsingCategory('All')">
+            All
+        </button>
+
+        {% for category in unique_categories %}
+        <button id="{{ category }}" onclick="filterUsingCategory(this.id)">
+            {{ category | capitalize }}
+        </button>
         {% endfor %}
-    </div>
-</div>
+    </p>
+
+    {% for post in site.posts %}
+    <article class="post" data-category="{{post.category}}">
+        <p class="first">
+            <a href="{{post.url}}" class="title">{{ post.title }}</a>
+            <span class="category">{{post.category | capitalize}}</span>
+            <span class="date">{{post.date | date_to_string: "ordinal", "US"}}</span>
+        </p>
+    </article>
+    {% endfor %}
+</section>
+
 <script type="text/javascript">
     function filterUsingCategory(selectedCategory) {
-        const posts = document.querySelectorAll(`.homepage .post-list .post`);
+        const posts = document.querySelectorAll(`.posts-container .post`);
         if (selectedCategory === "All") {
-            posts.forEach(post => post.style.display = "unset");
+            posts.forEach(post => post.style.display = "block");
             return;
         }
         posts.forEach(post => {
             if (post.dataset.category !== selectedCategory) {
                 post.style.display = "none";
             } else {
-                post.style.display = "unset";
+                post.style.display = "block";
             }
         })
     }
