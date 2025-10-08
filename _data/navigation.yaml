@@ -1,6 +1,6 @@
 - name: Home
   link: /
-- name: Resume
-  link: /resume.html
+#- name: Resume
+#  link: /resume.html
 - name: Now
   link: /now.html

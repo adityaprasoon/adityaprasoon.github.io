@@ -90,6 +90,7 @@
     font-family: var(--main-font), cursive;
     font-weight: normal;
     font-size: var(--font-size-normal);
+    line-height: 1.35;
     padding: 0 1em;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
@@ -223,4 +224,27 @@ nav.back-home {
         }
     }
     font-size: var(--font-size-small);
+}
+
+.post-footer {
+    font-size: var(--font-size-small);
+    .top {
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* MARKDOWN ELEMENTS */
+
+blockquote {
+    margin: 0;
+    padding: 0.5em 0;
+    background-color: var(--secondary-background);
+    border-left: 0.25em solid var(--tertiary-background);
+    p {
+        margin: 0;
+        padding: 0 0.5em;
+    }
 }
