@@ -1,6 +1,6 @@
 ---
 layout: with-nav-bar
-title: About
+title: Now
 ---
 On this page I occasionally share updates on the things going on in my life - things I am working on,
 books I am reading, stuff I am learning and general updates from life.
