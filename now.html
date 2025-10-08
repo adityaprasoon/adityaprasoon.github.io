@@ -1,0 +1,32 @@
+---
+layout: with-nav-bar
+title: Now
+---
+{% assign sorted_updates = site.updates | sort: 'date' | reverse %}
+<h1>Now: {{sorted_updates.first.date | | date: "%B, %Y"}}</h1>
+<p>On this page I occasionally share updates on the things going on in my life - things I am working on,
+    books I am reading, stuff I am learning and general updates from life.</p>
+
+<blockquote>
+    <p>A <a href="https://now.page/" target="_blank">now page</a>
+        is a page to share what you are currently up to in a mindful way, unlike social media.</p>
+</blockquote>
+
+
+
+{% if sorted_updates.first %}
+{% assign latest_update = sorted_updates.first%}
+<h2>{{latest_update.date | date_to_string: "ordinal", "US"}}</h2>
+{{latest_update.content}}
+{% else %}
+<p><em>No updates are posted yet.</em></p>
+{% endif%}
+
+<h2>Previous Updates</h2>
+{% for update in sorted_updates offset:1 %}
+<p>
+    <a class="no-decoration" href="{{update.url}}">Now: {{update.date | date: "%B, %Y" }}</a>
+</p>
+{% else %}
+<p>No prior updates are available.</p>
+{% endfor %}

@@ -111,6 +111,12 @@ a:active,
 a:focus {
     color: unset;
 }
+a.no-decoration {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
 
 h1 {
     font-size: 1.5em;
@@ -137,11 +143,9 @@ h3 {
         text-decoration: none;
         color: var(--secondary-font-color);
         font-weight: 300;
-
         &.current {
             color: var(--main-font-color);
         }
-
         &:hover {
             text-decoration: underline;
         }
@@ -200,12 +204,7 @@ h3 {
     }
 
     .title {
-        text-decoration: none;
         font-size: var(--font-size-normal);
-
-        &:hover {
-            text-decoration: underline;
-        }
     }
 }
 
@@ -216,23 +215,13 @@ h3 {
 }
 
 nav.back-home {
-    a {
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
     font-size: var(--font-size-small);
 }
 
 .post-footer {
-    font-size: var(--font-size-small);
     .top {
         text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
+        &:hover {}
     }
 }
 

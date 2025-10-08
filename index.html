@@ -69,7 +69,7 @@ layout: with-nav-bar
     {% for post in site.posts %}
     <article class="post" data-category="{{post.category}}">
         <p class="first">
-            <a href="{{post.url}}" class="title">{{ post.title }}</a>
+            <a href="{{post.url}}" class="title no-decoration">{{ post.title }}</a>
             <span class="category">{{post.category | capitalize}}</span>
             <span class="date">{{post.date | date_to_string: "ordinal", "US"}}</span>
         </p>
