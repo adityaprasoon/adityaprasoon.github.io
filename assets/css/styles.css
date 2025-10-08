@@ -160,7 +160,7 @@ h3 {
 
 .profile-icons {
     a {
-        margin:0 0.25em;
+        margin: 0 0.25em;
     }
 }
 
@@ -206,4 +206,21 @@ h3 {
             text-decoration: underline;
         }
     }
+}
+
+
+/* POST PAGE */
+.post-date {
+    font-size: var(--font-size-medium);
+}
+
+nav.back-home {
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    font-size: var(--font-size-small);
 }
