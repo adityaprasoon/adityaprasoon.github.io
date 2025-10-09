@@ -3,7 +3,7 @@ layout: with-nav-bar
 title: Now
 ---
 {% assign sorted_updates = site.updates | sort: 'date' | reverse %}
-<h1>Now: {{sorted_updates.first.date | | date: "%B, %Y"}}</h1>
+<h1>Now: {{sorted_updates.first.date | date: "%B, %Y"}}</h1>
 <p>On this page I occasionally share updates on the things going on in my life - things I am working on,
     books I am reading, stuff I am learning and general updates from life.</p>
 
