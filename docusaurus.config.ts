@@ -50,8 +50,8 @@ const config: Config = {
           rehypePlugins: [rehypeKatex],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/adityaprasoon/adityaprasoon.github.io/edit/main/',
+          // editUrl:
+          //   'https://github.com/adityaprasoon/adityaprasoon.github.io/edit/main/',
         },
         blog: {
           remarkPlugins: [remarkMath],
@@ -96,17 +96,6 @@ const config: Config = {
         onUntruncatedBlogPosts: 'warn',
       } satisfies Partial<BlogPluginOptions>,
     ],
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        redirects: [
-          {
-            to: '/notes/category/math-for-ml',
-            from: '/',
-          },
-        ],
-      },
-    ],
   ],
 
   stylesheets: [
@@ -130,7 +119,7 @@ const config: Config = {
       logo: {
         alt: 'Aditya Prasoon Logo',
         src: 'img/logo.svg',
-        href: '/notes/category/math-for-ml',
+        href: '/',
       },
       items: [
         {
@@ -142,12 +131,7 @@ const config: Config = {
         // Blog and Projects links are hidden until there is real content.
         // {to: '/blog', label: 'Blog', position: 'left'},
         // {to: '/projects', label: 'Projects', position: 'left'},
-        {to: '/contact', label: 'Contact', position: 'left'},
-        {
-          href: 'https://github.com/adityaprasoon',
-          label: 'GitHub',
-          position: 'right',
-        },
+        {to: '/now', label: 'Now', position: 'left'},
       ],
     },
     footer: {
