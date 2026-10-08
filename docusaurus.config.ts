@@ -88,7 +88,7 @@ const config: Config = {
         blogDescription: 'A showcase of things I have built',
         blogSidebarTitle: 'All projects',
         postsPerPage: 'ALL',
-        showReadingTime: false,
+        showReadingTime: true,
         remarkPlugins: [remarkMath],
         rehypePlugins: [rehypeKatex],
         onInlineTags: 'warn',
