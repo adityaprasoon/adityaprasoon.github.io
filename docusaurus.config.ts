@@ -101,7 +101,7 @@ const config: Config = {
       {
         redirects: [
           {
-            to: '/notes/intro',
+            to: '/notes/category/math-for-ml',
             from: '/',
           },
         ],
@@ -130,7 +130,7 @@ const config: Config = {
       logo: {
         alt: 'Aditya Prasoon Logo',
         src: 'img/logo.svg',
-        href: '/notes/intro',
+        href: '/notes/category/math-for-ml',
       },
       items: [
         {
