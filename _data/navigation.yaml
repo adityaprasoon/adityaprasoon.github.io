@@ -1,9 +1,0 @@
-- name: Home
-  link: /
-#- name: Resume
-#  link: /resume.html
-- name: Now
-  link: /now.html
-- name: Feed
-  link: /feed.xml
-  target: _blank

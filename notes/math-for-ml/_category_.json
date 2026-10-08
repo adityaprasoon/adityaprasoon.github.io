@@ -1,0 +1,8 @@
+{
+  "label": "Math for ML",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Mathematical foundations for machine learning."
+  }
+}
