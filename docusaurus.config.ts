@@ -122,12 +122,7 @@ const config: Config = {
         href: '/',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'notesSidebar',
-          position: 'left',
-          label: 'Notes',
-        },
+        {to: '/notes', label: 'Notes', position: 'left'},
         // Blog and Projects links are hidden until there is real content.
         // {to: '/blog', label: 'Blog', position: 'left'},
         // {to: '/projects', label: 'Projects', position: 'left'},
