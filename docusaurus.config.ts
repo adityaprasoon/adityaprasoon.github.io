@@ -182,9 +182,9 @@ const config: Config = {
 
   scripts: [
     {
-        src: "https://cloud.umami.is/script.js",
+        src: "https://umami.adityaprasoon.com/script.js",
         defer: true,
-        "data-website-id": "5bb16e51-378a-40d5-a126-4d5bffb8d496"
+        "data-website-id": "2e12b713-35b5-4697-92b6-3cf44ea3298c"
     }
   ]
 };
