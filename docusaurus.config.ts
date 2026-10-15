@@ -179,6 +179,14 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  scripts: [
+    {
+        src: "https://cloud.umami.is/script.js",
+        defer: true,
+        "data-website-id": "5bb16e51-378a-40d5-a126-4d5bffb8d496"
+    }
+  ]
 };
 
 export default config;
