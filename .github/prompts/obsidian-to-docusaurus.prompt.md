@@ -1,13 +1,37 @@
 ---
 name: Obsidian to Docusaurus
-description: "Convert an Obsidian Markdown note to this repository's Docusaurus-compatible format, including callouts and table-of-contents removal."
+description: "Convert an Obsidian Markdown note to this repository's Docusaurus-compatible format, including callouts, TOC removal, and completion-status frontmatter."
 argument-hint: "Path to the Markdown file"
 agent: agent
 ---
 
 Convert the user-provided Markdown file to a Docusaurus-compatible format in place. If no path is provided, use the active Markdown file. Keep the edit limited to the requested conversion; do not rewrite or summarize note content.
 
-This prompt is intentionally incremental. For now, convert callouts and remove tables of contents only. Do not silently change other Obsidian-specific syntax; report unsupported constructs for a later update to this prompt.
+This prompt is intentionally incremental. For now, convert callouts, remove tables of contents, and normalize the specified completion-status frontmatter only. Do not silently change other Obsidian-specific syntax; report unsupported constructs for a later update to this prompt.
+
+## Completion-Status Frontmatter
+
+- In the YAML frontmatter at the beginning of the file, replace the `Notes completion status` field when its value is `in progress` with `status: work-in-progress`.
+- Remove the old `Notes completion status` key and its nested list value; do not keep both representations.
+- Retain every other YAML frontmatter field and its value unchanged. Keep the YAML delimiters and leave the document body untouched by this metadata conversion.
+- For example, convert:
+
+  ```yaml
+  ---
+  title: Vectors
+  Notes completion status:
+    - in progress
+  ---
+  ```
+
+  to:
+
+  ```yaml
+  ---
+  title: Vectors
+  status: work-in-progress
+  ---
+  ```
 
 ## Tables of Contents
 
@@ -40,10 +64,10 @@ This prompt is intentionally incremental. For now, convert callouts and remove t
 
 - When converting blockquote callouts to `<details>`, remove exactly one leading `>` and its optional following space from each body line. Preserve nested blockquotes and all Markdown content, including question/answer lists.
 - Keep blank lines after `</summary>`, between headings and lists or paragraphs, and before `</details>`. These boundaries are required for valid Markdown/MDX output and to avoid invalid paragraph nesting in generated HTML.
-- Preserve the original document title and all non-TOC content. Do not add, remove, or rewrite explanations, questions, or answers.
+- Preserve the original document title, all non-targeted frontmatter, and all non-TOC body content. Do not add, remove, or rewrite explanations, questions, or answers.
 
 ## Validation
 
-- Follow the repository's existing Docusaurus and package-manager conventions; do not install a plugin or change global configuration for callout conversion.
+- Follow the repository's existing Docusaurus and package-manager conventions; do not install a plugin or change global configuration for these conversions.
 - Run the production build (`pnpm build`) and resolve any new errors or HTML-minifier warnings caused by the converted callouts.
-- Inspect the generated page to confirm the callouts render with their titles and expected fold state, and that removed TOC content is absent. Report any unrelated pre-existing build warnings separately.
+- Confirm the targeted frontmatter was normalized, all other YAML fields were retained, callouts render with their titles and expected fold state, and removed TOC content is absent. Report any unrelated pre-existing build warnings separately.
