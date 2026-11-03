@@ -4,6 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type {PluginOptions as BlogPluginOptions} from '@docusaurus/plugin-content-blog';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import {getNoteStatus} from './src/utils/noteStatus';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -46,6 +47,27 @@ const config: Config = {
           path: 'notes',
           routeBasePath: 'notes',
           sidebarPath: './sidebars.ts',
+          async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
+            const docs = args.docs.map((doc) => {
+              const status = getNoteStatus(doc.frontMatter?.status);
+              return status
+                ? {
+                    ...doc,
+                    frontMatter: {
+                      ...doc.frontMatter,
+                      sidebar_custom_props: {
+                        ...doc.frontMatter.sidebar_custom_props,
+                        noteStatus: status,
+                      },
+                    },
+                  }
+                : doc;
+            });
+            // Keep the overview as the landing page, not a sidebar item.
+            return (await defaultSidebarItemsGenerator({...args, docs})).filter(
+              (item) => item.type !== 'doc' || item.id !== 'overview',
+            );
+          },
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
           // Please change this to your repo.

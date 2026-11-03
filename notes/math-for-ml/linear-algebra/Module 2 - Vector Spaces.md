@@ -1,3 +1,7 @@
+---
+status: work-in-progress
+---
+
 # 2. Vector Spaces
 ## Groups and Vector Spaces
 
