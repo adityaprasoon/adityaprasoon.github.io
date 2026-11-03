@@ -78,7 +78,7 @@ export default function NowPage() {
   return (
     <Layout title="Now" description={pageDescription}>
       <main className="container margin-vert--lg">
-        <h1>{latest ? `Now: ${formatDate(latest.date)}` : 'Now'}</h1>
+        <h1>Now</h1>
         <p>{pageDescription}</p>
 
         <blockquote>
@@ -89,11 +89,7 @@ export default function NowPage() {
         </blockquote>
 
         {latest ? (
-          <>
-            <h2>{latest.title}</h2>
-            <p>{formatDate(latest.date)}</p>
-            {createElement(latest.content)}
-          </>
+          createElement(latest.content)
         ) : (
           <p>
             <em>No updates are posted yet.</em>
