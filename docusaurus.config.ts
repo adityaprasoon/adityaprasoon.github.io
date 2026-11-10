@@ -155,6 +155,7 @@ const config: Config = {
         // {to: '/blog', label: 'Blog', position: 'left'},
         // {to: '/projects', label: 'Projects', position: 'left'},
         {to: '/now', label: 'Now', position: 'left'},
+        {to: '/ai-use', label: 'AI Use', position: 'left'},
       ],
     },
     footer: {

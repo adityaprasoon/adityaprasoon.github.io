@@ -1,0 +1,8 @@
+.entry {
+  margin-bottom: 1rem;
+  scroll-margin-top: calc(var(--ifm-navbar-height) + 1rem);
+}
+
+.entry dd {
+  margin: 0.4rem 0 0;
+}
