@@ -1,15 +1,24 @@
 ---
 name: Obsidian to Docusaurus
-description: "Convert an Obsidian Markdown note to this repository's Docusaurus-compatible format, including callouts, image attachments, TOC removal, and completion-status frontmatter."
+description: "Convert an Obsidian Markdown note to this repository's Docusaurus-compatible format, including callouts, image attachments, TOC removal, and default frontmatter."
 argument-hint: "Path to the Markdown file"
 agent: agent
 ---
 
 Convert the user-provided Markdown file to a Docusaurus-compatible format in place. If no path is provided, use the active Markdown file. Keep the edit limited to the requested conversion; do not rewrite or summarize note content.
 
-This prompt is intentionally incremental. For now, convert callouts and local image attachments, remove tables of contents, and normalize the specified completion-status frontmatter only. Do not silently change other Obsidian-specific syntax; report unsupported constructs for a later update to this prompt.
+This prompt is intentionally incremental. For now, convert callouts and local image attachments, remove tables of contents, and add default frontmatter when it is absent or normalize the specified completion-status frontmatter when present. Do not silently change other Obsidian-specific syntax; report unsupported constructs for a later update to this prompt.
 
 ## Completion-Status Frontmatter
+
+- If the document has no YAML frontmatter at the beginning, add it with these two fields:
+
+  ```yaml
+  ---
+  status: work-in-progress
+  ai-authored: true
+  ---
+  ```
 
 - In the YAML frontmatter at the beginning of the file, replace the `Notes completion status` field when its value is `in progress` with `status: work-in-progress`.
 - Remove the old `Notes completion status` key and its nested list value; do not keep both representations.

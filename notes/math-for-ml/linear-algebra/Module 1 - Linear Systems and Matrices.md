@@ -1,3 +1,7 @@
+---
+status: work-in-progress
+ai-authored: true
+---
 # 1. Linear Systems and Matrices
 
 ## Linear Equations and Systems

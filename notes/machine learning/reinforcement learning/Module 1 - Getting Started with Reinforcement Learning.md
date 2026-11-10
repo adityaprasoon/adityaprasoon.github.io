@@ -1,3 +1,7 @@
+---
+status: work-in-progress
+ai-authored: true
+---
 # Module 1 - Getting Started with Reinforcement Learning
 
 ## Learning Through Interaction and Reward
