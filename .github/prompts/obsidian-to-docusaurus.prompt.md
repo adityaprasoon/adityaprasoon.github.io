@@ -53,8 +53,11 @@ This prompt is intentionally incremental. For now, convert callouts and local im
 
 - Recognize Obsidian callouts such as `> [!question]- Test Your Understanding`, including optional `+` or `-` fold markers and an optional title.
 - Docusaurus does not render Obsidian's `> [!type]` syntax as a callout. Convert it rather than leaving the marker or its blockquote formatting in the note.
+- Choose distinct built-in colors for these titles, matching case-insensitively and ignoring surrounding whitespace while preserving the original title text. These title-based rules take precedence over the Obsidian callout type:
+  - `Test Your Understanding`: blue, using `:::info[Title]` without a fold marker or `<details className="alert alert--info">` with a fold marker.
+  - `From Previous Question Papers`: green, using `:::tip[Title]` without a fold marker or `<details className="alert alert--success">` with a fold marker. Docusaurus's `tip` admonition uses the `success` alert color.
 - For a callout without a fold marker, use Docusaurus admonition syntax: `:::info[Title]`, the original body, and a closing `:::`. Use the nearest built-in type (`note`, `tip`, `info`, `warning`, or `danger`) when its meaning is clear; map `question` to `info`. Docusaurus admonitions do not preserve collapsed/expanded behavior.
-- For a callout with `-` or `+`, preserve its fold behavior with a native `<details>` element styled as a Docusaurus info alert. Leave it closed for `-` and add the `open` attribute for `+`. For example:
+- For a callout with `-` or `+`, preserve its fold behavior with a native `<details>` element styled with the title-based alert class above, defaulting to `alert alert--info` for other titles. Leave it closed for `-` and add the `open` attribute for `+`. For example:
 
   ```mdx
   <details className="alert alert--info">
@@ -87,4 +90,4 @@ This prompt is intentionally incremental. For now, convert callouts and local im
 
 - Follow the repository's existing Docusaurus and package-manager conventions; do not install a plugin or change global configuration for these conversions.
 - Run the production build (`pnpm build`) and resolve any new errors or HTML-minifier warnings caused by the converted callouts.
-- Confirm the targeted frontmatter was normalized, all other YAML fields were retained, callouts render with their titles and expected fold state, and removed TOC content is absent. Report any unrelated pre-existing build warnings separately.
+- Confirm the targeted frontmatter was normalized, all other YAML fields were retained, callouts render with their titles and expected fold state, and removed TOC content is absent. Verify that `Test Your Understanding` is blue and `From Previous Question Papers` is green, including when both use the same Obsidian callout type and when fold markers are absent. Report any unrelated pre-existing build warnings separately.

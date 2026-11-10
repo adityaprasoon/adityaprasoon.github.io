@@ -267,7 +267,7 @@ An autonomous-driving agent aims to reach its destination safely. Its state desc
 
 At a broad level, **model-based methods** use predictions of environmental behaviour, while **model-free methods** learn from experience without an explicit environment model.
 
-<details className="alert alert--info">
+<details className="alert alert--success">
 <summary>From Previous Question Papers</summary>
 
 **Questions**
@@ -439,7 +439,7 @@ Cloud-configuration tuning is one example. A learner repeatedly chooses among se
 
 These are simplified formulations: the basic stationary bandit repeatedly presents the same options and assumes each action's reward distribution remains fixed.
 
-<details className="alert alert--info">
+<details className="alert alert--success">
 <summary>From Previous Question Papers</summary>
 
 **Questions**
@@ -601,7 +601,7 @@ In practice, $\varepsilon$ may start higher when estimates are poorly informed a
 
 If the stationary true values are already known and one action is uniquely best, exploration provides no useful new information and sometimes selects inferior actions. Pure greedy selection can then outperform a method that retains a positive $\varepsilon$.
 
-<details className="alert alert--info">
+<details className="alert alert--success">
 <summary>From Previous Question Papers</summary>
 
 **Questions**
@@ -935,7 +935,7 @@ With that initialization, random selection is required at steps $2,3,4,6,9,12$. 
 
 A tied initial maximum is not proof of exploration. The classification must follow the estimates at each selection, rather than treating every initially tied choice as necessarily random.
 
-<details className="alert alert--info">
+<details className="alert alert--success">
 <summary>From Previous Question Papers</summary>
 
 **Questions**

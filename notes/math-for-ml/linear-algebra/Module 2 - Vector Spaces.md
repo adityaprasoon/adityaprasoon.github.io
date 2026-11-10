@@ -34,7 +34,7 @@ The first two laws are distributivity. The third gives associativity between sca
 
 Examples include $\mathbb R^n$, where addition and scalar multiplication are componentwise, and the set of real $m\times n$ matrices, where both operations are entrywise.
 
-<details>
+<details className="alert alert--info">
 <summary>Test Your Understanding</summary>
 
 **Questions**

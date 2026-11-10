@@ -97,7 +97,7 @@ Deep Blue is a chess-playing system. Its board is visible, legal moves have rule
 
 Task-environment questions ask for labels **and** brief justifications. The scenario and its assumptions matter; do not treat a label as universal when the prompt leaves the setup open.
 
-<details className="alert alert--info">
+<details className="alert alert--success">
 <summary>From Previous Question Papers</summary>
 
 **Questions**
@@ -247,7 +247,7 @@ This toy encoding illustrates the idea; its bit patterns are not a prescribed re
 
 🎯 **Exam hint:** Given a scenario, be prepared to choose an appropriate agent design; a diagram may also need to be identified as simple reflex, model-based, goal-based, utility-based, or learning-based.
 
-<details className="alert alert--info">
+<details className="alert alert--success">
 <summary>From Previous Question Papers</summary>
 
 **Questions**
@@ -356,7 +356,7 @@ Exactly half of all $9!$ arrangements have even parity: swapping any two numbere
 
 Several exams ask for a complete problem formulation. State assumptions when positions, action costs, or sensing details are unspecified; a formulation must be precise enough to determine valid actions and resulting states.
 
-<details className="alert alert--info">
+<details className="alert alert--success">
 <summary>From Previous Question Papers</summary>
 
 **Questions**
@@ -444,7 +444,7 @@ Let $b$ denote the maximum branching factor, $d$ the depth of the shallowest goa
 
 Search questions often ask for a state representation, a search structure, or the criteria used to compare strategies. Algorithm-specific comparisons require the details of those algorithms; the general criteria alone do not determine every table entry.
 
-<details className="alert alert--info">
+<details className="alert alert--success">
 <summary>From Previous Question Papers</summary>
 
 **Questions**

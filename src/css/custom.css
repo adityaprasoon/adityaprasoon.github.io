@@ -28,3 +28,16 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+details.alert--success {
+  --ifm-alert-background-color: #fff0f5;
+  --ifm-alert-background-color-highlight: rgba(204, 76, 125, 0.15);
+  --ifm-alert-foreground-color: #542338;
+  --ifm-alert-border-color: #cc4c7d;
+}
+
+[data-theme='dark'] details.alert--success {
+  --ifm-alert-background-color: #3b202c;
+  --ifm-alert-foreground-color: #ffe5ef;
+  --ifm-alert-border-color: #f294b6;
+}

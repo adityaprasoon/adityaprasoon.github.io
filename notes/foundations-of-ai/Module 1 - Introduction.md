@@ -281,7 +281,7 @@ A domestic trading agent helps a family buy needed items by collecting purchase 
 
 🎯 **Exam hint:** PEAS is important for the exam and may appear as a short question. Given an agent scenario, identify what success means, the external environment, the agent's outputs/actions, and its inputs/percepts.
 
-<details className="alert alert--info">
+<details className="alert alert--success">
 <summary>From Previous Question Papers</summary>
 
 **Questions**
