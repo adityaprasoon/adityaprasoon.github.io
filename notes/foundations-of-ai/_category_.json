@@ -1,6 +1,6 @@
 {
   "label": "Foundations of AI",
-  "position": 4,
+  "position": 3,
   "link": {
     "type": "generated-index",
     "description": "Algorithmic foundations of heuristic search, logic, and probabilistic AI."
