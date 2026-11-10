@@ -1,13 +1,13 @@
 ---
 name: Obsidian to Docusaurus
-description: "Convert an Obsidian Markdown note to this repository's Docusaurus-compatible format, including callouts, TOC removal, and completion-status frontmatter."
+description: "Convert an Obsidian Markdown note to this repository's Docusaurus-compatible format, including callouts, image attachments, TOC removal, and completion-status frontmatter."
 argument-hint: "Path to the Markdown file"
 agent: agent
 ---
 
 Convert the user-provided Markdown file to a Docusaurus-compatible format in place. If no path is provided, use the active Markdown file. Keep the edit limited to the requested conversion; do not rewrite or summarize note content.
 
-This prompt is intentionally incremental. For now, convert callouts, remove tables of contents, and normalize the specified completion-status frontmatter only. Do not silently change other Obsidian-specific syntax; report unsupported constructs for a later update to this prompt.
+This prompt is intentionally incremental. For now, convert callouts and local image attachments, remove tables of contents, and normalize the specified completion-status frontmatter only. Do not silently change other Obsidian-specific syntax; report unsupported constructs for a later update to this prompt.
 
 ## Completion-Status Frontmatter
 
@@ -65,6 +65,14 @@ This prompt is intentionally incremental. For now, convert callouts, remove tabl
 - When converting blockquote callouts to `<details>`, remove exactly one leading `>` and its optional following space from each body line. Preserve nested blockquotes and all Markdown content, including question/answer lists.
 - Keep blank lines after `</summary>`, between headings and lists or paragraphs, and before `</details>`. These boundaries are required for valid Markdown/MDX output and to avoid invalid paragraph nesting in generated HTML.
 - Preserve the original document title, all non-targeted frontmatter, and all non-TOC body content. Do not add, remove, or rewrite explanations, questions, or answers.
+
+## Image Attachments
+
+- Convert local Obsidian image embeds such as `![[attachments/diagram.png]]` to standard Markdown image syntax: `![Descriptive alt text](./attachments/diagram.png)`. Resolve the path relative to the Markdown file so Docusaurus can process the image.
+- Keep image files in their existing locations; do not move them to `static/` or change site configuration just for these conversions.
+- Use concise alt text based on the image and its surrounding context. Preserve existing captions and surrounding prose unchanged.
+- If an embedded image file cannot be found, do not invent a replacement path; report the missing attachment.
+- This rule applies to image embeds only. Leave other unsupported Obsidian transclusions unchanged and report them.
 
 ## Validation
 
