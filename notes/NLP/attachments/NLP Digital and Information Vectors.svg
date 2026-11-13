@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="640" viewBox="0 0 820 640" role="img" aria-labelledby="title description">
+  <title id="title">Word vectors for digital and information in the data and computer plane</title>
+  <desc id="description">Two arrows start at the origin. The digital vector ends at data 1683, computer 1670. The information vector ends at data 3982, computer 3325. The angle between them is about 5 degrees, giving a cosine of 0.996. The information arrow is longer because the word is more frequent.</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/></marker>
+    <marker id="arrow-grey" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+  </defs>
+  <rect width="820" height="640" fill="#ffffff"/>
+  <text x="410" y="32" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#172554">Digital and information point almost the same way</text>
+
+  <g stroke="#e2e8f0" stroke-width="1">
+    <path d="M230 560 V60 M370 560 V60 M510 560 V60 M650 560 V60"/>
+    <path d="M90 420 H720 M90 280 H720 M90 140 H720"/>
+  </g>
+
+  <g stroke="#64748b" stroke-width="2" fill="none">
+    <path d="M90 560 H728" marker-end="url(#arrow-grey)"/>
+    <path d="M90 560 V52" marker-end="url(#arrow-grey)"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#475569" text-anchor="middle">
+    <text x="90" y="580">0</text>
+    <text x="230" y="580">1000</text>
+    <text x="370" y="580">2000</text>
+    <text x="510" y="580">3000</text>
+    <text x="650" y="580">4000</text>
+    <text x="400" y="610" font-size="16" font-weight="700">context word: data (co-occurrence count)</text>
+    <text x="78" y="564" text-anchor="end">0</text>
+    <text x="78" y="424" text-anchor="end">1000</text>
+    <text x="78" y="284" text-anchor="end">2000</text>
+    <text x="78" y="144" text-anchor="end">3000</text>
+    <text transform="translate(26 300) rotate(-90)" font-size="16" font-weight="700">context word: computer (co-occurrence count)</text>
+  </g>
+
+  <path d="M90 560 L325.6 326.2" stroke="#2563eb" stroke-width="4" fill="none" marker-end="url(#arrow-blue)"/>
+  <path d="M90 560 L647.5 94.5" stroke="#dc2626" stroke-width="4" fill="none" marker-end="url(#arrow-red)"/>
+
+  <path d="M274.6 376.9 A260 260 0 0 1 289.6 393.4" stroke="#475569" stroke-width="3" fill="none"/>
+  <path d="M292 392 L352 464" stroke="#475569" stroke-width="1.5" fill="none"/>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">
+    <text x="318" y="312" text-anchor="end" fill="#2563eb">digital [1683, 1670]</text>
+    <text x="640" y="80" text-anchor="end" fill="#dc2626">information [3982, 3325]</text>
+    <text x="358" y="474" fill="#475569">angle about 5°, cosine 0.996</text>
+    <text x="358" y="496" font-size="14" font-weight="400" fill="#475569">Information is longer: it is the more frequent word.</text>
+  </g>
+</svg>
