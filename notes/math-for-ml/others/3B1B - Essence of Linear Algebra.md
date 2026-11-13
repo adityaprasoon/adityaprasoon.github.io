@@ -1,6 +1,6 @@
 ---
 status: work-in-progress
-ai-authored: true
+ai_involvement: ai-assisted
 ---
 
 ## Video 1 - Vectors

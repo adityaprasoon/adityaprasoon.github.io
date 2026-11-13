@@ -1,6 +1,6 @@
 ---
 status: work-in-progress
-ai-authored: true
+ai_involvement: ai-summarized
 ---
 
 # 2. Vector Spaces

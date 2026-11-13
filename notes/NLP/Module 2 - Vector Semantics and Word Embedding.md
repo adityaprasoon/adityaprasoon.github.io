@@ -1,5 +1,6 @@
 ---
 status: work-in-progress
+ai_involvement: ai-summarized
 ---
 # Module 2 - Vector Semantics and Word Embedding
 

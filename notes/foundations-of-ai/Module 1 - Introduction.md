@@ -1,6 +1,6 @@
 ---
-Notes completion status: completed
-ai-authored: true
+status: completed
+ai_involvement: ai-summarized
 ---
 # Module 1: Introduction
 

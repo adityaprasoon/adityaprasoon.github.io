@@ -1,5 +1,6 @@
 ---
 status: completed
+ai_involvement: ai-summarized
 ---
 # Module 1: Natural Language Understanding and Generation
 
