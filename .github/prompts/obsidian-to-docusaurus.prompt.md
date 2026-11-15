@@ -53,9 +53,9 @@ This prompt is intentionally incremental. For now, convert callouts and local im
 
 - Recognize Obsidian callouts such as `> [!question]- Test Your Understanding`, including optional `+` or `-` fold markers and an optional title.
 - Docusaurus does not render Obsidian's `> [!type]` syntax as a callout. Convert it rather than leaving the marker or its blockquote formatting in the note.
-- Choose distinct built-in colors for these titles, matching case-insensitively and ignoring surrounding whitespace while preserving the original title text. These title-based rules take precedence over the Obsidian callout type:
+- Choose distinct colors for these titles, matching case-insensitively and ignoring surrounding whitespace while preserving the original title text. These title-based rules take precedence over the Obsidian callout type:
   - `Test Your Understanding`: blue, using `:::info[Title]` without a fold marker or `<details className="alert alert--info">` with a fold marker.
-  - `From Previous Question Papers`: green, using `:::tip[Title]` without a fold marker or `<details className="alert alert--success">` with a fold marker. Docusaurus's `tip` admonition uses the `success` alert color.
+  - `From Previous Question Papers`: pink, using `<div className="alert alert--success previous-question-papers">` with a bold title and the original body when there is no fold marker, or `<details className="alert alert--success">` with a fold marker. The site's scoped `alert--success` styles make these callouts pink; do not use a `tip` admonition for this title.
 - For a callout without a fold marker, use Docusaurus admonition syntax: `:::info[Title]`, the original body, and a closing `:::`. Use the nearest built-in type (`note`, `tip`, `info`, `warning`, or `danger`) when its meaning is clear; map `question` to `info`. Docusaurus admonitions do not preserve collapsed/expanded behavior.
 - For a callout with `-` or `+`, preserve its fold behavior with a native `<details>` element styled with the title-based alert class above, defaulting to `alert alert--info` for other titles. Leave it closed for `-` and add the `open` attribute for `+`. For example:
 
@@ -74,6 +74,24 @@ This prompt is intentionally incremental. For now, convert callouts and local im
   </details>
   ```
 
+- For an unfolded `From Previous Question Papers` callout, use this pink alert wrapper rather than a Docusaurus `tip` admonition:
+
+  ```mdx
+  <div className="alert alert--success previous-question-papers">
+
+  **From Previous Question Papers**
+
+  **Questions**
+
+  1. Keep the original question text.
+
+  **Answers**
+
+  1. Keep the original answer text.
+
+  </div>
+  ```
+
 - When converting blockquote callouts to `<details>`, remove exactly one leading `>` and its optional following space from each body line. Preserve nested blockquotes and all Markdown content, including question/answer lists.
 - Keep blank lines after `</summary>`, between headings and lists or paragraphs, and before `</details>`. These boundaries are required for valid Markdown/MDX output and to avoid invalid paragraph nesting in generated HTML.
 - Preserve the original document title, all non-targeted frontmatter, and all non-TOC body content. Do not add, remove, or rewrite explanations, questions, or answers.
@@ -90,4 +108,4 @@ This prompt is intentionally incremental. For now, convert callouts and local im
 
 - Follow the repository's existing Docusaurus and package-manager conventions; do not install a plugin or change global configuration for these conversions.
 - Run the production build (`pnpm build`) and resolve any new errors or HTML-minifier warnings caused by the converted callouts.
-- Confirm the targeted frontmatter was normalized, all other YAML fields were retained, callouts render with their titles and expected fold state, and removed TOC content is absent. Verify that `Test Your Understanding` is blue and `From Previous Question Papers` is green, including when both use the same Obsidian callout type and when fold markers are absent. Report any unrelated pre-existing build warnings separately.
+- Confirm the targeted frontmatter was normalized, all other YAML fields were retained, callouts render with their titles and expected fold state, and removed TOC content is absent. Verify that `Test Your Understanding` is blue and `From Previous Question Papers` is pink, including when both use the same Obsidian callout type and when fold markers are absent. Report any unrelated pre-existing build warnings separately.

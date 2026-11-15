@@ -1,0 +1,8 @@
+{
+  "label": "Information Retrieval",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Notes on information retrieval."
+  }
+}

@@ -69,7 +69,7 @@ T2's discussion of ambiguity reinforces the difficulty: a sentence can allow mul
 
 A **taxonomy** is a classification organized into levels. The slide places NLP under **Artificial Intelligence**, within the broader area of **Computers**. It shows NLP branching into **Information Retrieval**, **Machine Translation**, and **Language Analysis**; language analysis then branches into **Semantics** and **Parsing**.
 
-![[NLP CS Taxonomy.svg]]
+![NLP taxonomy](./attachments/NLP%20CS%20Taxonomy.svg)
 
 ### Selected milestones and module roadmap
 
