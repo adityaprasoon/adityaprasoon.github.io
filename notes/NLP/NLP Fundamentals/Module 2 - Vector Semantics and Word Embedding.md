@@ -506,9 +506,8 @@ Word2Vec (Skip-gram and CBOW) and GloVe are static embedding methods: a word rec
 **Answer:** The fixed static embedding cannot adapt to context, so one vector must stand for both senses. A contextual embedding uses surrounding words to produce different representations for the river and financial uses.
 :::
 
-<div className="alert alert--success previous-question-papers">
-
-**From Previous Question Papers**
+<details className="alert alert--success">
+<summary>From Previous Question Papers</summary>
 
 **Questions**
 1. **Question 4. (4 Marks)** Consider the following statements: (a) "The cat saw the dog." (b) "The dog barked at the cat." Convert all words to lowercase and, without further preprocessing (do not remove stop words, lemmatize, stem, etc.), carry out the following tasks: (1) create a vocabulary (1 mark); (2) establish term frequency and document frequency (1 mark); (3) establish the TF-IDF vector for each document (2 marks). Use TF = word frequency / sentence length and use the natural logarithm where required. *(2023–24 Sem 1 Mid-sem Regular Q4)*
@@ -555,7 +554,7 @@ Word2Vec (Skip-gram and CBOW) and GloVe are static embedding methods: a word rec
 4. This repeats the same two-sentence setup and asks for TF, DF, and document TF-IDF vectors with the stated relative-frequency TF formula. The answer key uses the vocabulary in first-appearance order above and gives $D1=[0,0,0.0602,0,0.0602,0,0,0]$ and $D2=[0,0,0,0,0,0.0503,0.0503,0.0503]$. The three terms unique to each document receive the positive weights; shared terms have idf zero.
 5. (a) Contextual embeddings are vector representations of word tokens that change with the surrounding words, so the same word can receive different representations in different sentences. They matter because they let a system distinguish senses, such as *bank* as a financial institution versus a river bank, and represent each use of a word according to its context. (b) A static embedding such as Word2Vec or GloVe gives a word one fixed vector regardless of context, so a single vector must stand for all of its senses. A contextual method such as ELMo or BERT computes a distinct representation for each token in its context. Part (c), the attention calculation, belongs to a later module.
 
-</div>
+</details>
 
 <details className="alert alert--info">
 <summary>Test Your Understanding</summary>
